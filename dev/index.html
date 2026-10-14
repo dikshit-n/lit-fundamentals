@@ -16,7 +16,13 @@
   </head>
   <body>
     <my-element>
-      <p>This is child content</p>
     </my-element>
+      <p>This is child content</p>
   </body>
+  <script>
+    const element = document.querySelector("my-element");
+    element.addEventListener('count-changed', () => {
+      console.log('Count Changed')
+    });
+  </script>
 </html>
