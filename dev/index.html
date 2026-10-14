@@ -6,7 +6,8 @@
     <title>&lt;my-element> Demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../dist/my-element.js"></script>
+    <script type="module" src="../dist/x-element.js"></script>
+    <script type="module" src="../dist/x-button.js"></script>
     <style>
       p {
         border: solid 1px blue;
@@ -15,14 +16,19 @@
     </style>
   </head>
   <body>
-    <my-element>
-    </my-element>
+    <x-element>
       <p>This is child content</p>
+    </x-element>
+    <x-button onclick="xonclick()">Hello</x-button>
   </body>
   <script>
     const element = document.querySelector("my-element");
     element.addEventListener('count-changed', () => {
       console.log('Count Changed')
     });
+
+    function xonclick() {
+      console.log("Clicked")
+    };
   </script>
 </html>
