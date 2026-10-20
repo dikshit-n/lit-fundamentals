@@ -8,6 +8,7 @@
     <script src="../node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="../dist/x-element.js"></script>
     <script type="module" src="../dist/x-button.js"></script>
+    <script type="module" src="../dist/x-counter.js"></script>
     <style>
       p {
         border: solid 1px blue;
@@ -20,6 +21,7 @@
       <p>This is child content</p>
     </x-element>
     <x-button onclick="xonclick()">Hello</x-button>
+    <x-counter></x-counter>
   </body>
   <script>
     const element = document.querySelector("my-element");
